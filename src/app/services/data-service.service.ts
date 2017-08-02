@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { Auction } from '../auction';
 
@@ -13,9 +12,13 @@ export class DataServiceService {
     constructor( private http: HttpClient ) {
     }
 
-    getList(): Observable<Auktionen> {
-        return this.http.get<Auktionen>( 'https://schaffrathnumis.de/api/auctions/' );
+    getList(): any {
+      return this.http.get( 'https://schaffrathnumis.de/api/auctions' );
 
+    //         .subscribe( data => {
+    //             data = JSON.stringify(data);
+    //             console.log( 'data: ' + data );
+    //         } );
     }
 
 }
