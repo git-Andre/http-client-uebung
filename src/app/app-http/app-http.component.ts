@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Auction } from '../auction';
-import { HttpClient } from '@angular/common/http';
 import {DataServiceService} from '../services/data-service.service'
+// import { HttpClient } from '@angular/common/http';
 
 interface Auktionen {
     auctions: Auction[];
